@@ -11,8 +11,9 @@ struct AppConstants {
     static let apiKey = "c04cd6b4dd3fc9599bfd3edc85994b2b"
 }
 
-struct NavigationTitle {
+struct Strings {
     static let moviesTitle = "Movies"
+    static let searchMovies = "Search Movies"
 }
 
 struct APIUrl {

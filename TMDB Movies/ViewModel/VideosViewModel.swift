@@ -16,9 +16,9 @@ class VideosViewModel: VideosViewModelProtocol {
     @Published var searchText = ""
     @Published var movies: [Movie] = []
     
-    private let netWorkService: NetworkService
+    private let netWorkService: NetworkServiceProtocol
     
-    init(netWorkService: NetworkService) {
+    init(netWorkService: NetworkServiceProtocol) {
         self.netWorkService = netWorkService
     }
     

@@ -21,7 +21,7 @@ struct ContentView: View {
                             .padding(10)
                     }
                 }
-                .navigationTitle(NavigationTitle.moviesTitle)
+                .navigationTitle(Strings.moviesTitle)
             }
             .searchable(text: $viewModel.searchText)
             .onSubmit(of: .search, viewModel.fetchMovies)
@@ -29,7 +29,7 @@ struct ContentView: View {
                 viewModel.fetchMovies()
             }
             if viewModel.movies.isEmpty {
-                Text("Search Movies")
+                Text(Strings.searchMovies)
             }
         }
     }
