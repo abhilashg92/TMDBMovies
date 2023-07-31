@@ -27,9 +27,10 @@ struct ContentView: View {
             .onSubmit(of: .search, viewModel.fetchMovies)
             .onChange(of: viewModel.searchText) { newValue in
                 viewModel.fetchMovies()
-        }
-            Text("Search Movies")
-                .statusBarHidden(!viewModel.movies.isEmpty)
+            }
+            if viewModel.movies.isEmpty {
+                Text("Search Movies")
+            }
         }
     }
 }
