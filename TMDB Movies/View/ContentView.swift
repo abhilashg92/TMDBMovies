@@ -7,10 +7,9 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
     
-    @StateObject var viewModel: VideosViewModel
+    @EnvironmentObject var viewModel: VideosViewModel
     
     var body: some View {
         ZStack {
@@ -35,3 +34,10 @@ struct ContentView: View {
     }
 }
  
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        let vm = VideosViewModel(netWorkService: NetworkService())
+        ContentView()
+            .environmentObject(vm)
+    }
+}

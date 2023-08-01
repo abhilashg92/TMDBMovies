@@ -14,7 +14,7 @@ protocol VideosViewModelProtocol: ObservableObject {
 class VideosViewModel: VideosViewModelProtocol {
     
     @Published var searchText = ""
-    @Published var movies: [Movie] = []
+    @Published var movies: [MovieUIModel] = []
     
     private let netWorkService: NetworkServiceProtocol
     
@@ -28,7 +28,7 @@ class VideosViewModel: VideosViewModelProtocol {
             DispatchQueue.main.async {
                 switch result {
                 case .success(let movies):
-                    self.movies = movies.results ?? []
+                    self.movies = movies
                     break
                 case .failure(_):
                     self.movies.removeAll()
@@ -36,6 +36,5 @@ class VideosViewModel: VideosViewModelProtocol {
             }
         }
     }
-    
 }
 

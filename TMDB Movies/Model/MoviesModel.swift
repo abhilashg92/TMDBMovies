@@ -7,6 +7,13 @@
 
 import Foundation
 
+struct MovieUIModel: Identifiable {
+    let id: Int?
+    let title: String?
+    let thumbnail: String?
+    let overview: String?
+}
+
 struct MovieData: Codable {
     let results: [Movie]?
 }

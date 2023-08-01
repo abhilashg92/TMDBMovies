@@ -10,8 +10,10 @@ import SwiftUI
 @main
 struct TMDB_MoviesApp: App {
     var body: some Scene {
+        let viewModel = VideosViewModel(netWorkService: NetworkService())
         WindowGroup {
-            ContentView(viewModel: VideosViewModel(netWorkService: NetworkService()))
+            ContentView()
+                .environmentObject(viewModel)
         }
     }
 }

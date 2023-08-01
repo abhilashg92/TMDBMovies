@@ -9,11 +9,11 @@ import SwiftUI
 
 struct MovieView: View {
     
-    var movie: Movie
+    var movie: MovieUIModel
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: movie.getThumbnailUrl())) { image in
+            AsyncImage(url: URL(string: movie.thumbnail ?? "")) { image in
                 image
                     .resizable()
                     .scaledToFill()
@@ -26,10 +26,17 @@ struct MovieView: View {
             VStack(alignment: .leading) {
                 Text(movie.title ?? "")
                     .font(.headline)
-                Text(movie.original_title ?? "")
+                Text(movie.overview ?? "")
             }
             .padding(5)
             
         }
+    }
+}
+
+struct MovieView_Previews: PreviewProvider {
+    let vm = VideosViewModel(netWorkService: NetworkService())
+    static var previews: some View {
+        MovieView(movie: MovieUIModel(id: 77, title: "Mowgli", thumbnail: "", overview: "09/33/2022"))
     }
 }
