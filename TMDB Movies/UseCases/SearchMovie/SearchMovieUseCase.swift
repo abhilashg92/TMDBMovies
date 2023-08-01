@@ -23,6 +23,7 @@ final class SearchMoviesUseCase: SearchMoviesUseCaseProtocol {
                       handler: @escaping (Result<[MovieUIModel], MError>) -> Void) {
         
         guard let url = URL(string: APIUrl().getSearchMovieUrl() + searchText ) else {
+            handler(.failure(.unexpectedError))
             return
         }
         

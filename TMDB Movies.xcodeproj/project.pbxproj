@@ -13,6 +13,7 @@
 		573824842A76C80900E25D4A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573824832A76C80900E25D4A /* NetworkService.swift */; };
 		573824882A76C88B00E25D4A /* SearchMovieUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573824872A76C88B00E25D4A /* SearchMovieUseCase.swift */; };
 		57383E2F2A78C130006BC86F /* MovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57383E2E2A78C130006BC86F /* MovieDetailsView.swift */; };
+		57383E312A78FCB5006BC86F /* MockServiceClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57383E302A78FCB5006BC86F /* MockServiceClass.swift */; };
 		57B10C862A74D159003CCD02 /* TMDB_MoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B10C852A74D159003CCD02 /* TMDB_MoviesApp.swift */; };
 		57B10C882A74D159003CCD02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B10C872A74D159003CCD02 /* ContentView.swift */; };
 		57B10C8A2A74D15A003CCD02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57B10C892A74D15A003CCD02 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 		573824832A76C80900E25D4A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		573824872A76C88B00E25D4A /* SearchMovieUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovieUseCase.swift; sourceTree = "<group>"; };
 		57383E2E2A78C130006BC86F /* MovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsView.swift; sourceTree = "<group>"; };
+		57383E302A78FCB5006BC86F /* MockServiceClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceClass.swift; sourceTree = "<group>"; };
 		57B10C822A74D159003CCD02 /* TMDB Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TMDB Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57B10C852A74D159003CCD02 /* TMDB_MoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDB_MoviesApp.swift; sourceTree = "<group>"; };
 		57B10C872A74D159003CCD02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				57B10C962A74D15A003CCD02 /* TMDB_MoviesTests.swift */,
+				57383E302A78FCB5006BC86F /* MockServiceClass.swift */,
 			);
 			path = "TMDB MoviesTests";
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57383E312A78FCB5006BC86F /* MockServiceClass.swift in Sources */,
 				57B10C972A74D15A003CCD02 /* TMDB_MoviesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
