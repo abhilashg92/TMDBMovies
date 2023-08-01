@@ -26,10 +26,9 @@ struct MovieView: View {
             VStack(alignment: .leading) {
                 Text(movie.title ?? "")
                     .font(.headline)
-                Text(movie.overview ?? "")
+                Text(movie.date ?? "")
             }
             .padding(5)
-            
         }
     }
 }
@@ -37,6 +36,6 @@ struct MovieView: View {
 struct MovieView_Previews: PreviewProvider {
     let vm = VideosViewModel(netWorkService: NetworkService())
     static var previews: some View {
-        MovieView(movie: MovieUIModel(id: 77, title: "Mowgli", thumbnail: "", overview: "09/33/2022"))
+        MovieView(movie: MovieUIModel(id: 77, title: "Mowgli", thumbnail: "", overview: "Loren epsum", date: "09/11/1990"))
     }
 }

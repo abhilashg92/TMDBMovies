@@ -37,7 +37,8 @@ final class SearchMoviesUseCase: SearchMoviesUseCaseProtocol {
                         return MovieUIModel(id: $0.id,
                                             title: $0.title,
                                             thumbnail: $0.getThumbnailUrl(),
-                                            overview: $0.release_date)
+                                            overview: $0.overview,
+                                            date: $0.release_date)
                     }) ?? []
 
                     handler(.success(movies))

@@ -12,6 +12,7 @@ struct MovieUIModel: Identifiable {
     let title: String?
     let thumbnail: String?
     let overview: String?
+    let date: String?
 }
 
 struct MovieData: Codable {
